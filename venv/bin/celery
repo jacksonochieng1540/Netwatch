@@ -1,0 +1,6 @@
+#!/mnt/22e0217d-5935-4434-b92b-9efec7ea058d/HT/netwatch/venv/bin/python3
+import sys
+from celery.__main__ import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
