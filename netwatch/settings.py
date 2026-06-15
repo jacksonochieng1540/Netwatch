@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import environ
 env = environ.Env(
-    DEBUG=(bool, False)  # Defaults to False if DEBUG is missing from .env
+    DEBUG=(bool, False)  
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +24,6 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
-SECRET_KEY = "django-insecure-p2x_x69wj0l2oh$!z_0augimos+rr2_1a!ymkcq3!2qjd26_#^"
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
